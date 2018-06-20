@@ -6,7 +6,7 @@
         Change colour and title of Powershell Window
 
     .DESCRIPTION
-        This function is a good cmdlet to have loded in the profile if you need to distinct a important PS console with a custom title
+        This function is a good cmdlet to have loaded in the profile if you need to distinct a important PS console with a custom title
 
     .PARAMETER CustomMessage
         The Message showed in the PS Title Window
