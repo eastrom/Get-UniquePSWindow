@@ -1,5 +1,6 @@
 # Get-UniquePSWindow
 
+<#
 
 .SYNOPSIS
     Change colour and title of Powershell Window
@@ -13,3 +14,14 @@
     Author: eastrom
     Version: 1
 
+#>
+
+# Load into PS Profile
+
+* Notepad $PROFILE
+
+* Copy Script/function
+
+* Save
+
+* Restart Powershell
