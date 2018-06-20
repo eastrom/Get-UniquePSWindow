@@ -27,14 +27,15 @@ Function Get-UniquePSWindow {
 
 
 #$AvalibleColours = [enum]::getnames([consolecolor]) | where{$_ -ne "White"}
-    $AvalibleColours = "Black","DarkBlue","DarkGreen", "DarkCyan", "DarkRed", "DarkMagenta", "DarkYellow", "DarkGray"
-    $colour = Get-Random -InputObject $AvalibleColours 
+
+    $AvailableColors = "Black","DarkBlue","DarkGreen", "DarkCyan", "DarkRed", "DarkMagenta", "DarkGray"
+    $Color = Get-Random -InputObject $AvailableColors 
 
 
     $PSTitle = ("Windows PowerShell - "+$CustomMessage+" "+(Get-Date -format HH:mm))
 
 #Set BG Colour
-    $host.UI.RawUI.BackgroundColor = ($bckgrnd = $Colour)
+    $host.UI.RawUI.BackgroundColor = ($bckgrnd = $Color)
     $Host.PrivateData.ErrorBackgroundColor = $bckgrnd
     $Host.PrivateData.WarningBackgroundColor = $bckgrnd
     $Host.PrivateData.DebugBackgroundColor = $bckgrnd
@@ -42,7 +43,7 @@ Function Get-UniquePSWindow {
     $Host.PrivateData.ProgressBackgroundColor = $bckgrnd
 
 #Set Window title
-    if ($host.UI.RawUI.WindowTitle -match “Administrator”) {
+    if ($host.UI.RawUI.WindowTitle -match "Administrator") {
         $host.ui.RawUI.WindowTitle = ("Administrator: "+$PSTitle)
     }ELSE{
         $host.ui.RawUI.WindowTitle = $PSTitle
