@@ -27,6 +27,7 @@ Function Get-UniquePSWindow {
 
 
 #$AvalibleColours = [enum]::getnames([consolecolor]) | where{$_ -ne "White"}
+
     $AvailableColors = "Black","DarkBlue","DarkGreen", "DarkCyan", "DarkRed", "DarkMagenta", "DarkGray"
     $Color = Get-Random -InputObject $AvailableColors 
 
